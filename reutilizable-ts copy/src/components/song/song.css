@@ -1,27 +1,61 @@
-.song-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+*{
     background-color: #000;
-    color: #fff;
-    padding: 15px 80px;
-    margin: 10px; /* Margen en los lados */
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    width: 80rem;
+}
+.song-item {
+    display: flex; /* Usamos flexbox para organizar los elementos en fila */
+    align-items: center;
+    justify-content: space-between; /* Cambia a space-between para que la duración quede a la derecha */
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 15px; /* Espaciado interno */
+    margin: 10px 40px; /* Margen entre los elementos */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    width: 80rem; /* Ancho fijo del componente */
 }
 
-.song-item h3 {
-    margin: 0;
-    font-size: 16px;
+.titulo {
+    display: flex; /* Usamos flexbox para organizar la imagen y el texto */
+    align-items: center; /* Alineamos verticalmente */
+    flex: 1; /* Permite que esta parte ocupe el espacio disponible */
+}
+
+.image-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    width: 50px; /* Ancho de la imagen */
+    height: 50px; /* Alto de la imagen */
+    overflow: hidden; /* Evita que la imagen se salga del contenedor */
+    border-radius: 4px; /* Bordes redondeados */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.image img {
+    width: 100%; /* La imagen ocupa todo el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
 }
 
 .song-item > div {
-    flex: 1;
-    text-align: left;
-    padding: 0 10px;
+    flex: 1; /* Permite que cada div ocupe espacio igual */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 0 10px; /* Espacio lateral */
 }
 
-.song-item div:nth-child(4) {
-    text-align: right;
+.song-item h3, .song-item p {
+    margin: 0; /* Elimina márgenes */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+.song-item p {
+    font-size: 14px; /* Tamaño de fuente para el álbum */
+    color: #bbb; /* Color gris para el texto del álbum */
+}
+
+/* Nueva clase para el contenedor de duración */
+.song-duration {
+    text-align: right; /* Alinea el texto a la derecha */
+    flex-basis: 100px; /* Puedes ajustar este ancho según tus necesidades */
 }

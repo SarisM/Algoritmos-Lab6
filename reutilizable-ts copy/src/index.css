@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto de los elementos */
+    background-color: #000000;
+}
+
+body {
+    margin: 0; /* Elimina el margen por defecto */
+    font-family: Arial, sans-serif; /* Fuente general */
+    background-color: #000000;
+}
+
+h1 {
+    color: #fff; /* Color blanco para el título principal */
+    text-align: center; /* Centrar el título */
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+form {
+    display: flex; /* Usamos flexbox para alinear los inputs en fila */
+    flex-direction: row; /* Coloca los inputs uno debajo del otro */
+    align-items: center; /* Centrar inputs horizontalmente */
+    justify-content: space-around;
+    margin-bottom: 20px; /* Espaciado inferior */
+    padding: 0px 60px;
+    color: white;
+}
+
+.title1{
+    color: white;
+}
+
+input {
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Espaciado vertical entre inputs */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    background-color: #000000; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+}
+
+button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave al cambiar de color */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color al pasar el cursor sobre el botón */
+}
+
+.song-titles {
+    display: flex; /* Usamos flexbox para alinear los títulos en fila */
+    justify-content: space-between; /* Espaciado igual entre los títulos */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: #000000; /* Fondo gris oscuro para los títulos */
+    border-radius: 8px; /* Bordes redondeados */
+    margin: 10px 0px; /* Margen entre la lista y los títulos */
+    width: 80rem;
+}
+
+.song-titles h3 {
+    color: #fff; /* Color blanco para los títulos */
+    margin: 0; /* Elimina márgenes */
+    flex: 1; /* Permite que cada título ocupe espacio igual */
+    text-align: center; /* Centra el texto de los títulos */
+}
+
+#song-list {
+    margin: 0 40px; /* Margen a los lados de la lista de canciones */
+}

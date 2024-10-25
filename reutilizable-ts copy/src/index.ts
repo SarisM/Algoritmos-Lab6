@@ -78,15 +78,23 @@ class AppContainer extends HTMLElement {
     async render() {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
-                <h1>Formulario para agregar canciones</h1>
+                <link rel="stylesheet" href="../src/index.css">
+
+                <h1 class="title1">My playlist</h1>
                 <form id="song-form">
-                    <input id="name" placeholder="Nombre de la canción" required />
-                    <input id="author" placeholder="Autor" required />
-                    <input id="album" placeholder="Álbum" required />
-                    <input id="duration" type="number" placeholder="Duración" required />
-                    <input id="img" placeholder="Añadir enlace" required />
-                    <button type="submit" id="save">Agregar canción</button>
+                    <input id="name" placeholder="Name of the song" required />
+                    <input id="author" placeholder="Author" required />
+                    <input id="album" placeholder="Album" required />
+                    <input id="duration" type="number" placeholder="Duration" required />
+                    <input id="img" placeholder="Add image link" required />
+                    <button type="submit" id="save">Add song</button>
                 </form>
+                <div class="song-titles">
+                    <h3>Title</h3>
+                    <h3>Album</h3>
+                    <h3>Date</h3>
+                    <h3>Duration</h3>
+                </div>
                 <section id="song-list"></section>
             `;
 

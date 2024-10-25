@@ -1,18 +1,20 @@
-
 export enum Attribute {
     'uid' = 'uid',
     'name' = 'name',
     'date' = 'date',
     'author' = 'author',
     'duration' = 'duration',
+    'album' = 'album',
     'img' = 'img'
 }
+
 class SongItem extends HTMLElement {
     uid?: number;
     name?: string;
     author?: string;
     date?: number;
     duration?: number;
+    album?: string;
     img?: string;
 
     static get observedAttributes() {
@@ -26,11 +28,10 @@ class SongItem extends HTMLElement {
 
     connectedCallback() {
         this.render();
-        // console.log(this.img)
     }
 
     attributeChangedCallback(propName: Attribute, _: string | undefined, newValue: string | undefined) {
-        if (propName === Attribute.date || propName === Attribute.duration ||  propName === Attribute.uid) {
+        if (propName === Attribute.date || propName === Attribute.duration || propName === Attribute.uid) {
             this[propName] = newValue ? Number(newValue) : undefined;
         } else {
             this[propName] = newValue;
@@ -44,21 +45,25 @@ class SongItem extends HTMLElement {
                 <link rel="stylesheet" href="../src/components/song/song.css">
 
                 <div class="song-item">
-                    <div class="image-name">
-                        <img src="${this.img || "not found"}" >
-                        <h3>${this.name || "Nombre"}</h3>
+                    <div class="titulo">
+                        <div class="image">
+                            <img src="${this.img || "not found"}" alt="">
+                        </div>
+                        <div class="image-info">
+                            <h3>${this.name || "Nombre"}</h3>
+                            <p>${this.author || "Autor"}</p>
+                        </div>
                     </div>
-                    <div>
-                        <h3>${this.author || "Autor"}</h3>
+
+                    <div class="album">
+                        <h3>${this.album || "Álbum"}</h3>
                     </div>
-                    <div>
+                    <div class="date added">
                         <h3>${this.date ? new Date(this.date).toLocaleDateString() : "Fecha"}</h3>
                     </div>
-                    <div>
-                        <h3>${this.duration || "Duración"}</h3>
+                    <div class="song-duration"> <!-- Cambiado para usar la clase .song-duration -->
+                        <h3>${this.duration || "Duración"}min</h3>
                     </div>
-                    
-                
                 </div>
             `;
         }
