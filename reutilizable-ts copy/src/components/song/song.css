@@ -1,0 +1,27 @@
+.song-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 80px;
+    margin: 10px; /* Margen en los lados */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    width: 80rem;
+}
+
+.song-item h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.song-item > div {
+    flex: 1;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.song-item div:nth-child(4) {
+    text-align: right;
+}
